@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='get_token'),    #   Token obtain pair view
     path('api/token/refresh/', TokenRefreshView.as_view(), name='refresh'), #   View to refresh token
     path('api-auth/', include('rest_framework.urls')),  #   pre-built urls from the rest framework
+    path('api/', include('api.urls')),
 ]
